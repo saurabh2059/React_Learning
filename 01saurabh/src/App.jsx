@@ -5,11 +5,11 @@ import Chai from './Chai.jsx'
 
 
 function App() {
-  
+  const userName = "saurabh"
 
   return (
     <>
-      <h1> HI SAURABH FROM VITE</h1>
+      <h1> HI SAURABH FROM VITE {userName}</h1>
       <Chai />
   </>
   )
