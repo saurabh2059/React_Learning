@@ -1,33 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
+import {useState } from 'react'
+
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  // useState gives array one value and another function ; 
+  // it is called hook
+  // it changes the value in whole ui where the variable is used
+  // removes the complexity of getting element using addtext
+  
+
+  let [counter, setCounter] = useState(0)
+
+// let counter = 5
+
+const addValue = ()=>{
+  // console.log("value added", Math.random())
+  counter = counter+1
+  setCounter(counter)
+  // console.log(counter)
+}
+
+const subValue = () =>{
+  // counter -- ;
+  setCounter(counter-1);
+}
+
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+     <h1>HI SAURABH</h1>
+    <h2>COUNTER Value : {counter}</h2>
+    <button onClick={addValue}>Add Value {counter}</button> <br />
+    <br />
+    <button onClick={subValue}>Sub Value {counter}</button>
     </>
   )
 }
